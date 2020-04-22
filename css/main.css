@@ -89,6 +89,10 @@ main .share-post {
   justify-content: space-between;
 }
 
+main .post-likes {
+  margin-bottom: 1.2em;
+}
+
 main .navigate-post button {
   border: none;
   background: var(--clr-primary);
