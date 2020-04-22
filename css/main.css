@@ -145,7 +145,7 @@ footer {
   }
 
   .brand-and-menu-btn {
-    flex-basis: 70%;
+    flex-basis: 65%;
   }
   .bl-container {
     width: 100%;
@@ -196,6 +196,10 @@ footer {
 }
 
 @media (min-width: 830px) {
+  .brand-and-menu-btn {
+    flex-basis: 75%;
+  }
+
   .nav-tab {
     flex-basis: 25%;
   }
