@@ -125,7 +125,7 @@ footer {
   color: darkgrey;
 }
 
-@media (min-width: 765px) {
+@media (min-width: 830px) {
   body {
     font-size: 16px;
   }
