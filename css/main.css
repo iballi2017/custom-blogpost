@@ -55,7 +55,8 @@ nav {
 
 .nav-tab .nav-item {
   list-style: none;
-  font-size: 0.7rem;
+  font-size: 1rem;
+  margin-bottom: 1em;
 }
 
 .nav-tab a {
