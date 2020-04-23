@@ -1,6 +1,7 @@
 /* variables */
 :root {
   --clr-primary: cadetblue;
+  --clr-secondary: rgb(11, 58, 59);
   --clr-jolly: floralwhite;
 }
 
@@ -18,6 +19,7 @@ body {
 .main-layout {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 20px;
 }
 
 nav {
@@ -66,7 +68,6 @@ nav {
 
 main {
   grid-column: 1 / -1;
-  padding: 1.3em;
   line-height: 1.6;
 }
 
@@ -74,9 +75,62 @@ main article {
   text-align: justify;
 }
 
-main img {
+main .post-title {
+  margin: 0.5em;
+}
+
+main article,
+main .post-likes,
+main .post-footer {
+  padding: 0 1em;
+}
+
+main .img-container {
+  height: 200px;
+  background-image: url('../images/freestocks-xSGCbGYQtO4-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+main .img-container p {
+  position: absolute;
+  bottom: 0;
+  margin: 0.4em;
+}
+
+main .blogpost-header-img {
+  height: 300px;
+}
+
+main figure img {
   width: 100%;
   /* max-width: 500px; */
+}
+
+/* main .right-quote {
+  height: 70px;
+  border-left: 1px solid gold;
+} */
+
+/* main .right-quote::before {
+  content: 'fgds';
+  background-color: red;
+} */
+
+main .image-blockquote-grid {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr auto; */
+}
+
+main .image-blockquote-grid figure {
+  grid-column: 1 /3;
+}
+
+main .image-blockquote-grid > .tip {
+  grid-column: 3/-1;
+  border-left: 2px solid goldenrod;
+  align-self: center;
+  padding-left: 0.8em;
 }
 
 main .post-footer {
@@ -88,11 +142,24 @@ main .share-post {
   display: flex;
   justify-content: space-between;
 }
+main .share-post .social-icons {
+  color: var(--clr-primary);
+}
+main .share-post .social-icons:hover {
+  color: var(--clr-secondary);
+}
 
 main .post-likes {
   margin-bottom: 1.2em;
 }
-
+main .post-likes .fa-heart {
+  cursor: pointer;
+  color: var(--clr-primary);
+}
+main .post-likes .fa-heart:hover,
+main .post-likes .fa-heart:focus {
+  color: var(--clr-secondary);
+}
 main .navigate-post button {
   border: none;
   background: var(--clr-primary);
@@ -101,12 +168,11 @@ main .navigate-post button {
 }
 main .navigate-post button:focus,
 main .navigate-post button:hover {
-  background: var(--clr-jolly);
+  background: var(--clr-secondary);
   color: var(--clr-primary);
 }
 
 .sidenav {
-  padding: 1.3em;
   grid-column: 1 / -1;
   color: var(--clr-primary);
 }
@@ -128,6 +194,12 @@ footer {
   grid-column: 1 / -1;
   text-align: center;
   color: darkgrey;
+}
+@media (min-width: 1200px) {
+  main .image-blockquote-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+  }
 }
 
 @media (min-width: 830px) {
@@ -187,7 +259,7 @@ footer {
     line-height: 1.9;
   }
   main .share-post {
-    flex-basis: 14%;
+    flex-basis: 13%;
   }
 
   .sidenav {
@@ -207,5 +279,11 @@ footer {
 
   .nav-tab {
     flex-basis: 25%;
+  }
+}
+
+@media (max-width: 830px) {
+  main .share-post {
+    flex-basis: 20%;
   }
 }
